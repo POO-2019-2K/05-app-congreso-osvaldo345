@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Talleres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="agenda.css" />
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Talleres</h1>
+        <p>Registro de Talleres</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Formulario -->
+            <div class="col-md-2 mb-5">
+                <div class="row">
+                    <form id="form" class="col-12 needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="id">Nombre del taller:</label>
+                            <input type="text" class="form-control" id="id" placeholder="Taller de becerros de 3" />
+                            <div class="valid-feedback">Correcto!</div>
+                            <div class="invalid-feedback">El campo nombre es obligatorio</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Fecha de inicio</label>
+                            <input type="date" class="form-control" id="birthday" />
+                            <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Introduzca una fecha valida</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Fecha de termino</label>
+                            <input type="date" class="form-control" id="birthday2" />
+                            <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Introduzca una fecha valida</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sueldo">lugares disponibles</label>
+                            <input type="text" class="form-control" id="lugares" placeholder="$15" />
+                            <div class="valid-feedback">Correcto!</div>
+                            <div class="invalid-feedback">El campo nombre es obligatorio</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sueldo">Duracion</label>
+                            <input type="text" class="form-control" id="duracion" placeholder="10 hrs" />
+                            <div class="valid-feedback">Correcto!</div>
+                            <div class="invalid-feedback">El campo nombre es obligatorio</div>
+                        </div>
+
+                        <button id="btnAdd" type="button" class="btn btn-primary">
+                            Crear
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="row my-3">
+                <table id="info" class="table">
+                    <thead>
+                        <th>Lista de talleres</th>
+                        <th>Participantes de los talleres</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Tabla -->
+            <div class="col-md-4">
+                <table id="agenda" class="table">
+                    <thead>
+                        <tr>
+                            <th>nombre del taller</th>
+                            <th>fecha de inicio</th>
+                            <th>fecha de término</th>
+                            <th>lugares disponibles</th>
+                            <th>duracion</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    <form id="form" class="col-12 needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="id">Nombre del alumno:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="juanito alcachofa" />
+                            <div class="valid-feedback">Correcto!</div>
+                            <div class="invalid-feedback">El campo nombre es obligatorio</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id">Correo electronico:</label>
+                            <input type="text" class="form-control" id="correo" placeholder="juanito@gmail.com" />
+                            <div class="valid-feedback">Correcto!</div>
+                            <div class="invalid-feedback">El campo nombre es obligatorio</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="birthday" />
+                            <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Introduzca una fecha valida</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sueldo">Taller al que se inscriba</label>
+                            <input type="text" class="form-control" id="talleres" placeholder="Taller de becerros de 3" />
+                            <div class="valid-feedback">Correcto!</div>
+                            <div class="invalid-feedback">El campo nombre es obligatorio</div>
+                        </div>
+
+
+                        <button id="btnAdd2" type="button" class="btn btn-primary">
+                            Agregar
+                        </button>
+                    </form>
+                </div>
+        </div>
+        <!-- Row -->
+    </div>
+    <!-- Container -->
+
+    <script src="./main.js" type="module"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
