@@ -3,7 +3,6 @@ export default class Participantes {
       this._id = participante.id;
       this._birthday = participante.birthday;
       this._birthday2 = participante.birthday2;
-      this._birthday3 = participante.birthday3;
       this._lugares = participante._lugares;
       this._duracion = participante.duracion;
       this._months = [
@@ -34,9 +33,6 @@ export default class Participantes {
       return this._birthday2;
     }
 
-    get birthday3() {
-      return this._birthday3;
-    }
   
     getBirthdayAsString() {
       let date =
@@ -58,17 +54,6 @@ export default class Participantes {
         this._birthday2.getFullYear();
   
       return date2;
-    }
-
-    getBirthdayAsString3() {
-      let date3 =
-        this._birthday3.getDate() +
-        "/" +
-        this._months[this._birthday3.getMonth()] +
-        "/" +
-        this._birthday3.getFullYear();
-  
-      return date3;
     }
   
     getAge() {

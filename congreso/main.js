@@ -1,9 +1,9 @@
-import Talleres from "/talleres.js";
-import Participantes from "/Participantes.js";
+import Talleres from "./Talleres.js";
+import Participantes from "./Participantes.js";
 
 class Main {
   constructor() {
-    let agenda = new Talleres(
+    let talleres = new Talleres(
       document.querySelector("#agenda"),
       document.querySelector("#info")
     );
@@ -36,8 +36,7 @@ class Main {
           duracion: duracion
         };
 
-        let Participante = new Participantes(objParticipante);
-
+        let participante = new Participantes(objParticipante);
         talleres.addEmployee(participante);
 
       }

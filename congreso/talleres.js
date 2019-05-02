@@ -1,4 +1,4 @@
-import Participantes from "/Participantes.js";
+import Participantes from "./Participantes.js";
 
 export default class Talleres {
   constructor(tableAgenda, tableInfo) {
@@ -16,7 +16,7 @@ export default class Talleres {
     if(!taller) {
       return;
     }
-    taller.forEach( (Participante index) => {
+    taller.forEach( (Participante, index) => {
       console.log(Participante);
       Participante.birthday = new Date(Participante.birthday);
       this._showInTable(new Participantes(Participante));
@@ -37,12 +37,13 @@ export default class Talleres {
     cellBirthday2.innerHTML = participante.getBirthdayAsString2();
     cellLugares.innerHTML = participante.lugares;
     cellDuracion.innerHTML = participante.duracion;
-    cellAge.innerHTML = employee.getAge();
+    cellAge.innerHTML = participante.getAge();
 
 
-  addEmployee(participante) {
+  addEmployee(participante);{
     this._showInTable(participante);
     localStorage.setItem("taller", JSON.stringify(this._taller));
     console.log(localStorage.getItem("taller"));
   }
+}
 }
