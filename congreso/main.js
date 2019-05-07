@@ -34,7 +34,7 @@ class Main {
           birthday2: birthday2,
           lugares: lugares,
           duracion: duracion
-        };
+        }
 
         let participante = new Participantes(objParticipante);
         talleres.addEmployee(participante);

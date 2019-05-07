@@ -28,9 +28,9 @@ export default class Talleres {
     let cellId = row.insertCell(0);
     let cellBirthday = row.insertCell(1);
     let cellBirthday2 = row.insertCell(2);
-    let cellLugares = row.insertCell(5);
-    let cellDuracion = row.insertCell(6);
-    let cellAge = row.insertCell(7);
+    let cellLugares = row.insertCell(3);
+    let cellDuracion = row.insertCell(4);
+    let cellAge = row.insertCell(5);
 
     cellId.innerHTML = participante.id;
     cellBirthday.innerHTML = participante.getBirthdayAsString();
@@ -39,11 +39,11 @@ export default class Talleres {
     cellDuracion.innerHTML = participante.duracion;
     cellAge.innerHTML = participante.getAge();
 
-
-  addEmployee(participante);{
+  }
+  addEmployee(participante) {
     this._showInTable(participante);
     localStorage.setItem("taller", JSON.stringify(this._taller));
     console.log(localStorage.getItem("taller"));
   }
-}
+
 }
