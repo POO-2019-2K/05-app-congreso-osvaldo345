@@ -45,5 +45,22 @@ export default class Talleres {
     localStorage.setItem("taller", JSON.stringify(this._taller));
     console.log(localStorage.getItem("taller"));
   }
+  _showInTable(participante) {
+    let row = this._tableInfo.insertRow(-1);
+    let cellNombre = row.insertCell(0);
+    let cellCorreo = row.insertCell(1);
+    let cellBirthday3 = row.insertCell(2);
+    let cellTalleres = row.insertCell(3);
 
+    cellNombre.innerHTML = participante.nombre;
+    cellCorreo.innerHTML = participante.correo;
+    cellBirthday3.innerHTML = participante.getBirthdayAsString3();
+    cellTalleres.innerHTML = participante.Talleres;
+  }
+  addEmployee2(participante) {
+    this._showInTable(participante);
+    localStorage.setItem("taller", JSON.stringify(this._taller));
+    console.log(localStorage.getItem("taller"));
+  }
+  
 }

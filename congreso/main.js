@@ -46,6 +46,38 @@ class Main {
 
 
     });
+
+    document.querySelector("#btnAdd2").addEventListener("click", () => {
+      let form = document.querySelector("#form");
+      form.classList.add("was-validated");
+
+      if (form.checkValidity() === true) {
+        let nombre = document.querySelector("#nombre").value;
+        let correo = document.querySelector("#correo").value;
+      
+        let sBirthday3 = document.querySelector("#birthday3").value;
+        sBirthday3 = 3.split("-");
+
+        let birthday3 = new Date(sBirthday3[0], sBirthday3[1] - 1, sBirthday3[2]);
+
+
+        let talleres = document.querySelector("#talleres").value;
+        
+
+        let objParticipante2 = {
+          nombre: nombre,
+          correo: correo,
+          birthday3: birthday3,
+          talleres: talleres,
+        }
+
+        let participante2 = new Participantes(objParticipante2);
+        talleres.addEmployee2(participante);
+
+      }
+
+      console.log(form.checkValidity());
+    });
   }
 }
 
