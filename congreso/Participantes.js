@@ -5,10 +5,6 @@ export default class Participantes {
       this._birthday2 = participante.birthday2;
       this._lugares = participante.lugares;
       this._duracion = participante.duracion;
-      this._nombre = participante.nombre;
-      this._correo = participante.correo;
-      this._birthday3 = participante.birthday3;
-      this.talleres = participante.talleres;
       this._months = [
         "Ene",
         "Feb",
@@ -37,32 +33,14 @@ export default class Participantes {
       return this._birthday2;
     }
 
-    get birthday3() {
-      return this._birthday2;
-    }
-
     get lugares() {
       return this._lugares;
     }
-  
+
     get duracion() {
       return this._duracion;
     }
-  
-    get nombre() {
-      return this._nombre;
-    }
 
-    get correo() {
-      return this._correo;
-    }
-
-    get talleres() {
-      return this._talleres;
-    }
-
-
-  
     getBirthdayAsString() {
       let date =
         this._birthday.getDate() +
@@ -85,16 +63,6 @@ export default class Participantes {
       return date2;
     }
 
-    getBirthdayAsString3() {
-      let date3 =
-        this._birthday3.getDate() +
-        "/" +
-        this._months[this._birthday3.getMonth()] +
-        "/" +
-        this._birthday3.getFullYear();
-  
-      return date3;
-    }
   
 
     getAge() {
@@ -106,4 +74,5 @@ export default class Participantes {
       return age;
     }
   }
+
   

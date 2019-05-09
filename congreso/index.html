@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -62,8 +62,12 @@
             <div class="row my-3">
                 <table id="info" class="table">
                     <thead>
-                        <th>Lista de talleres</th>
-                        <th>Participantes de los talleres</th>
+                        <tr>
+                            <th>nombre</th>
+                            <th>correo</th>
+                            <th>fecha de nac.</th>
+                            <th>lista de talleres</th>
+                        </tr>
                     </thead>
                     <tbody>
                     </tbody>
@@ -86,7 +90,7 @@
             </div>
             <div class="col-md-2">
                 <div class="row">
-                    <form id="form" class="col-12 needs-validation" novalidate>
+                    <form id="form2" class="col-12 needs-validation" novalidate>
                         <div class="form-group">
                             <label for="id">Nombre del alumno:</label>
                             <input type="text" class="form-control" id="nombre" placeholder="juanito alcachofa" />
@@ -107,7 +111,7 @@
                         </div>
                         <div class="form-group">
                             <label for="sueldo">Taller al que se inscriba</label>
-                            <input type="text" class="form-control" id="talleres" placeholder="Taller de becerros de 3" />
+                            <input type="text" class="form-control" id="tall" placeholder="Taller de becerros de 3" />
                             <div class="valid-feedback">Correcto!</div>
                             <div class="invalid-feedback">El campo nombre es obligatorio</div>
                         </div>
