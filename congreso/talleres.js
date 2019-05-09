@@ -37,14 +37,14 @@ export default class Talleres {
     cellLugares.innerHTML = participante.lugares;
     cellDuracion.innerHTML = participante.duracion;
 
-    //let objParticipante = {
-     // id: id,
-      //birthday: birthday,
-      //birthday2: birthday2,
-      //lugares: lugares,
-      //duracion: duracion
-    //}
-    //this._taller.push(objParticipante);
+    let objParticipante = {
+      id: participante.id,
+      birthday: participante.birthday,
+      birthday2: participante.birthday2,
+      lugares: participante.lugares,
+      duracion: participante.duracion
+    }
+    this._taller.push(objParticipante);
 
 
   }
